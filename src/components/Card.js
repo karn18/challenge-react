@@ -32,7 +32,7 @@ const Body = styled.div`
   min-height: 330px;
 `;
 
-const Footer = styled.p`
+const Footer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -121,7 +121,6 @@ export default connect((state) => state)(function Card(props) {
       });
     }
   }
-  console.log(item.name);
   return (
     <Container>
       {flip ? (
