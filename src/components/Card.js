@@ -29,7 +29,12 @@ const Body = styled.div`
   justify-content: center;
   gap: 1rem;
   height: 100%;
-  min-height: 330px;
+
+  @media (max-width: 640px) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    min-height: max-content;
+  }
 `;
 
 const Footer = styled.div`
