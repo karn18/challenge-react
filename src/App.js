@@ -22,11 +22,14 @@ const H1 = styled.h1`
 const CardList = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   gap: 1rem;
 
-  @media (max-width: 640px) {
+  @media only screen and (min-width: 640px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: 640px) {
     flex-direction: column;
   }
 `;
@@ -45,7 +48,6 @@ export default connect((state) => state)(
           return resp.json();
         })
         .then(function (data) {
-          console.log(data);
           self.setState({ charities: data });
         });
 

@@ -6,16 +6,19 @@ const Container = styled.div`
   border-width: 1px;
   border-style: solid;
   border-radius: 0.5rem;
-  width: 48%;
 
-  @media (max-width: 640px) {
+  @media only screen and (min-width: 640px) {
+    width: 48%;
+  }
+
+  @media only screen and (max-width: 640px) {
     width: 100%;
   }
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: 240px;
+  height: 300px;
   object-fit: cover;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -25,16 +28,11 @@ const Body = styled.div`
   align-items: center;
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  height: 100%;
-
-  @media (max-width: 640px) {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    min-height: max-content;
-  }
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 `;
 
 const Footer = styled.div`
