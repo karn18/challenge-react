@@ -91,7 +91,7 @@ export default connect((state) => state)(function Card(props) {
         onClick={function () {
           setSelectedAmount(amount);
         }}
-        checked={selectedAmount === amount}
+        defaultChecked={selectedAmount === amount}
       />
       {amount}
     </label>
